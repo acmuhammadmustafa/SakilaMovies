@@ -4,9 +4,10 @@ public class HomeScreen {
     DisplayData displayData = new DisplayData();
 
     public void homeScreen(){
-        System.out.printf("Select an option:\n1) Display all products\n2) Display all customers\n3) Display all categories\n0) Exit");
+        System.out.print("Welcome!" +
+                "Enter the first and last name of the actor you'd like to list: ");
         System.out.println();
-        int command = ConsoleHelper.promptForInt("Selection");
+        String command = ConsoleHelper.promptForString("Actor's Name");
         switch (command){
             case 1 -> displayData.showProducts();
             case 2 -> displayData.showCustomers();
